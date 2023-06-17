@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-body: #404040;
+}
+
+ body {
+  background-color: var(--bg-body);
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('./assets/fundo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5.4rem;
+}
+
+main .hole {
+  width: 22rem;
+  height: 16.8rem;
+  background-image: url('./assets/toupeira6.svg');
+  background-repeat: no-repeat;
+  
+}
+
+main div:nth-child(3) {
+  animation: comingOutOfTheHole 800ms 2s ease;
+}
+
+main div:nth-child(5) {
+  animation: comingOutOfTheHole 800ms 4s ease;
+}
+
+main div:nth-child(12) {
+  animation: comingOutOfTheHole 800ms 6s ease-in;
+}
+
+@keyframes comingOutOfTheHole {
+  0% {
+    background-image: url('./assets/toupeira1.svg');
+  }
+  
+  20% {
+    background-image: url('./assets/toupeira2.svg');
+  }
+  
+  40% {
+    background-image: url('./assets/toupeira3.svg');
+  }
+  
+  60% {
+    background-image: url('./assets/toupeira4.svg');
+  }
+  
+  80% {
+    background-image: url('./assets/toupeira5.svg');
+  }
+
+  100% {
+    background-image: url('./assets/toupeira6.svg');
+  }
+}
